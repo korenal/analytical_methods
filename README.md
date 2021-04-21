@@ -4,19 +4,19 @@ Excersice for the subject: Analytical methods in cancer and population genomics 
 At first I would like download the reference human genome:
 
 ```console
-wget https://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/annotation/GRCh37_latest/refseq_identifiers/GRCh37_latest_genomic.fna.gz
+wget https://hgdownload.soe.ucsc.edu/goldenPath/hg19/chromosomes/chrX.fa.gz
 ```
 
 At first I would like to align tumor data to the reference genome:
 - first of all -> I creating BWA index for reference genome data:
 ```console
-bwa index -p GRCh37 GRCh37_latest_genomic.fna
+bwa index -p chrX chrX.fa 
 ```
 
 At the second I tumour data and wild type data to the reference genome:
 ```console
-bwa mem -M GRCh37 tu.r1.fq tu.r2.fq 2> logs/bwa.err > results/tu.sam
-bwa mem -M GRCh37 wt.r1.fq wt.r2.fq 2> logs/bwa.err > results/wt.sam
+bwa mem -M chrX tu.r1.fq tu.r2.fq 2> logs/bwa.err > results/tu.sam
+bwa mem -M chrX wt.r1.fq wt.r2.fq 2> logs/bwa.err > results/wt.sam
 ```
 
 Covert a SAM file to a BAM file
