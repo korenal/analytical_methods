@@ -7,7 +7,7 @@ At first I would like download the reference human genome:
 wget https://hgdownload.soe.ucsc.edu/goldenPath/hg19/chromosomes/chrX.fa.gz
 ```
 
-##### 1. Aligning reads with BWA-MEM:
+### 1. Aligning reads with BWA-MEM:
 Creating BWA-MEM index on reference genome data:
 ```console
 bwa index -p chrX chrX.fa 
@@ -50,7 +50,7 @@ samtools index tu.output.bam
 samtools index wt.output.bam
 ```
 
-##### 2. Generating a read-depth plot:
+### 2. Generating a read-depth plot:
 Computing the read depth at each position:
 ```console
 samtools depth tu.output.bam > tu.coverage
@@ -69,7 +69,7 @@ plot(tu.chrX$locus, tu.chrX$depth)
 plot(wt.chrX$locus, wt.chrX$depth)
 ```
 
-##### 3. Variant calling:
+### 3. Variant calling:
 Scan the alignments for differences compared to the reference:
 ```console
 freebayes --fasta-reference chrX.fa -b /home/korenal/tumor_data/results/tu.output.bam -v tu.vcf
