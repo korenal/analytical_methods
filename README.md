@@ -57,7 +57,7 @@ samtools depth tu.output.bam > tu.coverage
 samtools depth wt.output.bam > wt.coverage
 ```
 Plot the data in R studio:
-```console
+```r
 library(reshape)
 tu.chrX <- read.table("C:/Users/lucie/OneDrive/Dokumenty/tu.coverage", header=FALSE, sep='\t', na.strings="NA", dec=".", strip.white=TRUE)
 wt.chrX <- read.table("C:/Users/lucie/OneDrive/Dokumenty/wt.coverage", header=FALSE, sep='\t', na.strings="NA", dec=".", strip.white=TRUE)
