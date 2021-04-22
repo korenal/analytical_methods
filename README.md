@@ -1,3 +1,4 @@
+![cotrol - OK](https://user-images.githubusercontent.com/53037749/115750396-692f5c00-a398-11eb-8e7b-7bee1ab98d70.png)
 # analytical_methods
 Excersice for the subject: Analytical methods in cancer and population genomics and transcriptomics
 
@@ -72,9 +73,8 @@ library(lattice, pos=10)
 xyplot(depth ~ locus, type="p", pch=16, auto.key=list(border=TRUE), par.settings=simpleTheme(pch=16), scales=list(x=list(relation='same'), y=list(relation='same')), wt.chrX, main="Read-depth plot of control data", col = "red")
 ```
 
-
-![control data](https://user-images.githubusercontent.com/53037749/115682695-0026f480-a356-11eb-97d1-984415549346.png)
 ![tumor - read-depth graph](https://user-images.githubusercontent.com/53037749/115723040-dd113a80-a37f-11eb-83e2-2e6b7b9c1442.png)
+![cotrol - OK](https://user-images.githubusercontent.com/53037749/115750409-6e8ca680-a398-11eb-904e-50317c7bdadd.png)
 
 
 ### 3. Variant calling:
