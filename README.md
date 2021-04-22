@@ -69,11 +69,16 @@ plot(tu.chrX$locus, tu.chrX$depth)
 plot(wt.chrX$locus, wt.chrX$depth)
 ```
 
+
+![control data](https://user-images.githubusercontent.com/53037749/115682695-0026f480-a356-11eb-97d1-984415549346.png)![tumor - read-depth graph](https://user-images.githubusercontent.com/53037749/115682789-1765e200-a356-11eb-98d1-8679a9a3fb8a.png)
+
+![control data](https://user-images.githubusercontent.com/53037749/115682695-0026f480-a356-11eb-97d1-984415549346.png)
+
+
+
 ### 3. Variant calling:
 Scan the alignments for differences compared to the reference:
 ```console
 freebayes --fasta-reference chrX.fa -b /home/korenal/tumor_data/results/tu.output.bam -v tu.vcf
 freebayes --fasta-reference chrX.fa -b /home/korenal/tumor_data/results/wt.output.bam -v wt.vcf
-
-
-
+```
