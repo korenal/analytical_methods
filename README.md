@@ -65,12 +65,15 @@ wt.chrX <- read.table("C:/Users/lucie/OneDrive/Dokumenty/wt.coverage", header=FA
 tu.chrX <-rename(tu.chrX,c(V1="Chr", V2="locus", V3="depth")) 
 wt.chrX <-rename(wt.chrX,c(V1="Chr", V2="locus", V3="depth"))
 
-plot(tu.chrX$locus, tu.chrX$depth)
-plot(wt.chrX$locus, wt.chrX$depth)
+library(lattice, pos=10) 
+xyplot(depth ~ locus, type="p", pch=16, auto.key=list(border=TRUE), par.settings=simpleTheme(pch=16), scales=list(x=list(relation='same'), y=list(relation='same')), tu.chrX, main="depth by tumor data")
+![control data](https://user-images.githubusercontent.com/53037749/115722912-bbb04e80-a37f-11eb-9134-6a2b2b8f1262.png)
+
+library(lattice, pos=10) 
+xyplot(depth ~ locus, type="p", pch=16, auto.key=list(border=TRUE), par.settings=simpleTheme(pch=16), scales=list(x=list(relation='same'), y=list(relation='same')), wt.chrX, main="Read-depth plot of control data", col = "red")
 ```
 
-
-![control data](https://user-images.githubusercontent.com/53037749/115682695-0026f480-a356-11eb-97d1-984415549346.png)![tumor - read-depth graph](https://user-images.githubusercontent.com/53037749/115682789-1765e200-a356-11eb-98d1-8679a9a3fb8a.png)
+![control](https://user-images.githubusercontent.com/53037749/115722938-c23ec600-a37f-11eb-92e8-7d3393c67ff7.png)
 
 ![control data](https://user-images.githubusercontent.com/53037749/115682695-0026f480-a356-11eb-97d1-984415549346.png)
 
@@ -82,3 +85,4 @@ Scan the alignments for differences compared to the reference:
 freebayes --fasta-reference chrX.fa -b /home/korenal/tumor_data/results/tu.output.bam -v tu.vcf
 freebayes --fasta-reference chrX.fa -b /home/korenal/tumor_data/results/wt.output.bam -v wt.vcf
 ```
+![control](https://user-images.githubusercontent.com/53037749/115722938-c23ec600-a37f-11eb-92e8-7d3393c67ff7.png)
