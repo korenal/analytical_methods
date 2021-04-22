@@ -67,7 +67,6 @@ wt.chrX <-rename(wt.chrX,c(V1="Chr", V2="locus", V3="depth"))
 
 library(lattice, pos=10) 
 xyplot(depth ~ locus, type="p", pch=16, auto.key=list(border=TRUE), par.settings=simpleTheme(pch=16), scales=list(x=list(relation='same'), y=list(relation='same')), tu.chrX, main="depth by tumor data")
-![control data](https://user-images.githubusercontent.com/53037749/115722912-bbb04e80-a37f-11eb-9134-6a2b2b8f1262.png)
 
 library(lattice, pos=10) 
 xyplot(depth ~ locus, type="p", pch=16, auto.key=list(border=TRUE), par.settings=simpleTheme(pch=16), scales=list(x=list(relation='same'), y=list(relation='same')), wt.chrX, main="Read-depth plot of control data", col = "red")
