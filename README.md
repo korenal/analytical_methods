@@ -1,6 +1,4 @@
-![cotrol - OK](https://user-images.githubusercontent.com/53037749/115750396-692f5c00-a398-11eb-8e7b-7bee1ab98d70.png)
-# analytical_methods
-Excersice for the subject: Analytical methods in cancer and population genomics and transcriptomics
+# Cancer Genomics Data Analysis Exercise
 
 At first I would like download the reference human genome:
 
