@@ -73,11 +73,3 @@ xyplot(depth ~ locus, type="p", pch=16, auto.key=list(border=TRUE), par.settings
 
 ![tumor - read-depth graph](https://user-images.githubusercontent.com/53037749/115723040-dd113a80-a37f-11eb-83e2-2e6b7b9c1442.png)
 ![cotrol - OK](https://user-images.githubusercontent.com/53037749/115750409-6e8ca680-a398-11eb-904e-50317c7bdadd.png)
-
-
-### 3. Variant calling:
-Scan the alignments for differences compared to the reference:
-```console
-freebayes --fasta-reference chrX.fa -b /home/korenal/tumor_data/results/tu.output.bam -v tu.vcf
-freebayes --fasta-reference chrX.fa -b /home/korenal/tumor_data/results/wt.output.bam -v wt.vcf
-```
